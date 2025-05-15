@@ -115,9 +115,9 @@ Example 2: Troubleshoot a Kubernetes Pod in CrashLoopBackOff
     # Step 4: Fix image or entry point if needed
     kubectl set image deployment <deployment-name> <container-name>=<new-image>
 
-##✅ Best Practices for Prompt Engineering
-##Be clear and specific – The more specific the prompt, the better the output.
-##Use context – Provide background information or examples when needed.
-##Iterate and refine – If the output isn’t ideal, adjust the prompt.
-##Use CoT for complex tasks – Step-by-step reasoning improves accuracy.
+## ✅ Best Practices for Prompt Engineering
+## Be clear and specific – The more specific the prompt, the better the output.
+## Use context – Provide background information or examples when needed.
+## Iterate and refine – If the output isn’t ideal, adjust the prompt.
+## Use CoT for complex tasks – Step-by-step reasoning improves accuracy.
 
