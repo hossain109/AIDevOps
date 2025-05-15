@@ -11,7 +11,7 @@ In zero-shot prompting, the AI is asked to generate a response without any prior
 **Prompt:**  
 
 **Response:**  
-```bash
+
 #!/bin/bash
 # Backup logs from /var/logs to /backup
 mkdir -p /backup
@@ -45,7 +45,7 @@ Now write a script to delete logs older than 7 days.
 
 
 **Response:**
-```bash
+
 #!/bin/bash
 # Delete logs older than 7 days
 find /var/logs -type f -mtime +7 -exec rm {} \;
@@ -71,7 +71,7 @@ Now write a command to scale the nginx deployment to 5 replicas.
 
 
 **Response:**
-```bash
+
 kubectl scale deployment nginx --replicas=5
 
 
@@ -92,7 +92,7 @@ It shows a "permission denied" error. How can I fix it? Please explain step-by-s
 
 
 **Response:**
-```bash
+
 # Step 1: Check directory permissions
 ls -ld /var/logs
 
