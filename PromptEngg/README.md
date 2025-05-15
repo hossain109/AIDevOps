@@ -10,16 +10,15 @@ In zero-shot prompting, the AI is asked to generate a response without any prior
 ### Example 1: Generate a Shell Script to Backup Logs  
 **Prompt:**  
 
-**Response:**  
+    **Response:**  
+    #!/bin/bash
+    # Backup logs from /var/logs to /backup
+    mkdir -p /backup
+    cp -r /var/logs/* /backup/
+    echo "Backup completed!"
 
-#!/bin/bash
-# Backup logs from /var/logs to /backup
-mkdir -p /backup
-cp -r /var/logs/* /backup/
-echo "Backup completed!"
-
-Explain the purpose of the kubectl get pods command.
-The `kubectl get pods` command lists all the running and pending pods in the current Kubernetes namespace. It provides information about the pod name, status, restart count, and age.
+    Explain the purpose of the kubectl get pods command.
+    The `kubectl get pods` command lists all the running and pending pods in the current Kubernetes namespace. It provides information about the pod name, status, restart count, and age.
 
 ## Few-Shot Prompting
 
@@ -27,29 +26,28 @@ In few-shot prompting, you provide the AI with a few examples to guide its respo
 
 ### Example 1: Write a Shell Script to Create and Archive Logs
 
-**Prompt:**
-Here are some shell scripts to manage logs:
+    **Prompt:**
+    Here are some shell scripts to manage logs:
 
-Example 1:
+    Example 1:
 
-Create a log file
-touch /var/logs/app.log
-echo "Application started" > /var/logs/app.log
+    Create a log file
+    touch /var/logs/app.log
+    echo "Application started" > /var/logs/app.log
 
-Example 2:
+    Example 2:
 
-Archive old logs
-tar -czf /backup/app_logs.tar.gz /var/logs/*
+    Archive old logs
+    tar -czf /backup/app_logs.tar.gz /var/logs/*
 
-Now write a script to delete logs older than 7 days.
+    Now write a script to delete logs older than 7 days.
 
 
-**Response:**
-
-#!/bin/bash
-# Delete logs older than 7 days
-find /var/logs -type f -mtime +7 -exec rm {} \;
-echo "Old logs deleted!"
+    **Response:**
+    #!/bin/bash
+    # Delete logs older than 7 days
+    find /var/logs -type f -mtime +7 -exec rm {} \;
+    echo "Old logs deleted!"
 
 ## Multi-Shot Prompting
 
@@ -57,22 +55,21 @@ Multi-shot prompting is an extension of few-shot prompting where you provide mul
 
 ### Example 1: Create a Kubernetes Deployment and Describe It
 
-**Prompt:**
-Example 1:
-kubectl create deployment nginx --image=nginx
+    **Prompt:**
+    Example 1:
+    kubectl create deployment nginx --image=nginx
 
-Example 2:
-kubectl get deployment nginx
+    Example 2:
+    kubectl get deployment nginx
 
-Example 3:
-kubectl describe deployment nginx
+    Example 3:
+    kubectl describe deployment nginx
 
-Now write a command to scale the nginx deployment to 5 replicas.
+    Now write a command to scale the nginx deployment to 5 replicas.
 
 
-**Response:**
-
-kubectl scale deployment nginx --replicas=5
+    **Response:**
+    kubectl scale deployment nginx --replicas=5
 
 
 ## Chain of Thought (CoT) Prompting
@@ -81,44 +78,42 @@ CoT prompting encourages the AI to "think step-by-step" to improve the accuracy 
 
 ### Example 1: Debug a Failing Shell Script Step-by-Step
 
-**Prompt:**
-My shell script is failing. Here is the script:
+    **Prompt:**
+    My shell script is failing. Here is the script:
 
-#!/bin/bash
-mkdir -p /backup
-cp /var/logs/* /backup/
+    #!/bin/bash
+    mkdir -p /backup
+    cp /var/logs/* /backup/
 
-It shows a "permission denied" error. How can I fix it? Please explain step-by-step.
+    It shows a "permission denied" error. How can I fix it? Please explain step-by-step.
 
 
-**Response:**
+    **Response:**
+    # Step 1: Check directory permissions
+    ls -ld /var/logs
 
-# Step 1: Check directory permissions
-ls -ld /var/logs
+    # Step 2: Use sudo if permissions are restricted
+    sudo cp /var/logs/* /backup/
 
-# Step 2: Use sudo if permissions are restricted
-sudo cp /var/logs/* /backup/
-
-# Step 3: If SELinux is enabled, adjust security context
-sudo chcon -R -t user_home_t /backup
+    # Step 3: If SELinux is enabled, adjust security context
+    sudo chcon -R -t user_home_t /backup
 Example 2: Troubleshoot a Kubernetes Pod in CrashLoopBackOff
-Prompt:
+    Prompt:
 
-My Kubernetes pod is in CrashLoopBackOff. Help me debug step-by-step.
-Response:
+    My Kubernetes pod is in CrashLoopBackOff. Help me debug step-by-step.
+    Response:
 
-bash
-# Step 1: Check pod status
-kubectl get pod <pod-name>
+    # Step 1: Check pod status
+    kubectl get pod <pod-name>
 
-# Step 2: Get detailed pod logs
-kubectl logs <pod-name>
+    # Step 2: Get detailed pod logs
+    kubectl logs <pod-name>
 
-# Step 3: Describe pod for configuration issues
-kubectl describe pod <pod-name>
+    # Step 3: Describe pod for configuration issues
+    kubectl describe pod <pod-name>
 
-# Step 4: Fix image or entry point if needed
-kubectl set image deployment <deployment-name> <container-name>=<new-image>
+    # Step 4: Fix image or entry point if needed
+    kubectl set image deployment <deployment-name> <container-name>=<new-image>
 
 ##✅ Best Practices for Prompt Engineering
 ##Be clear and specific – The more specific the prompt, the better the output.
