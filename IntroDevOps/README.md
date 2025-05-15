@@ -4,9 +4,9 @@ Traditional AI relies on structured data, pre-defined rules, and predictive mode
 Example: Incident Detection & Prediction
     Use Case: Predicting system failures before they occur.
     How It Works:
-        Uses log-based anomaly detection and pattern recognition (e.g., time-series forecasting).
-        If CPU usage suddenly spikes beyond a threshold, AI predicts a potential issue.
-        The system alerts DevOps teams to take preventive action.
+        - Uses log-based anomaly detection and pattern recognition (e.g., time-series forecasting).
+        - If CPU usage suddenly spikes beyond a threshold, AI predicts a potential issue.
+        - The system alerts DevOps teams to take preventive action.
     Limitations:
-        Works only on pre-trained scenarios.
-        Cannot generate insights beyond structured input data.
+        - Works only on pre-trained scenarios.
+        - Cannot generate insights beyond structured input data.
