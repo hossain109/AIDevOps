@@ -23,6 +23,21 @@ The Advantage of host LLM: security, costing.
 Automation with Ollama, 1. install ollama 2. identify 3. pull 4. setup python environment, 5.python script
 
 Create virtual python environment
+then needs to install ollama because python does not talk to LLM directly . Python talk via ollama model.
+
+How to install: first go to internet search ollama and install then search model llama from same site and downlaod it.
+Now start : ollama serve
+Go to viraul environment: source venv/bin/activate
+install dependancies: resquirements.txt (inside resquirements put ollama) 
+create pyhon prompt file and execute: python3 generate_dockerfile.py 
+This process is called local LLM.
+
+The hosted LLM call API by using token , token is costly ..by using token we can see exemple in Gooogle Studio AI
+
+
+
+
+
 
 
 Llama is LLM(large language model) of Meta.
