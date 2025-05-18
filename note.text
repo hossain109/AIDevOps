@@ -1,8 +1,28 @@
 ** LLM: Text based language AI model is call large language model.
 
 Prompt: A prompt is the text instruction or query given to an LLM to elicit a response.
+Advantage of prompting: costing
+Each 100 words 60-80 tokens,
+Diefferents types of prompting: zero, Few shot, Multi shot, Cot(chain of thought) etc.
+Zero shot: is without exemple is called also direct shot prompting . this is very familier.
+Few shot:provide context, instruction, exemple
 
 AI Chatbot: Open AI, Deepseek, Claude, Lama
 
 AI Agents: Github copilot(free), google AI studio(1 million token), openai has one
 
+
+
+pour cv: auomataing process by AI
+LLM (large language model): is a model which is focus on text based generaton. There is two types of LLM: local LLM and hosted LLM
+ 
+Local LLM: An AI large language model that runs inside an organization's private datacenter
+The Advantage of local LLM: security, ifrastructure maintainace
+The Advantage of host LLM: security, costing.
+
+Automation with Ollama, 1. install ollama 2. identify 3. pull 4. setup python environment, 5.python script
+
+Create virtual python environment
+
+
+Llama is LLM(large language model) of Meta.
