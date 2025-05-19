@@ -15,7 +15,10 @@ AI Agents: Github copilot(free), google AI studio(1 million token), openai has o
 
 pour cv: auomataing process by AI
 LLM (large language model): is a model which is focus on text based generaton. There is two types of LLM: local LLM and hosted LLM
- 
+Integrated AI Deepseek and Ollama
+Shell scripting github copilot
+
+
 Local LLM: An AI large language model that runs inside an organization's private datacenter
 The Advantage of local LLM: security, ifrastructure maintainace
 The Advantage of host LLM: security, costing.
@@ -35,9 +38,21 @@ This process is called local LLM.
 The hosted LLM call API by using token , token is costly ..by using token we can see exemple in Gooogle Studio AI
 
 
+Note: created dockerfile by Generative AI
 
 
+**Now install model deepseek: serach from search bar ollama.com then choise deepseekr1
+and run command: ollama run deepseek-r1:1.5b
 
+**AI assited shell scripting
+AIPair programmming: when a program is written by the help of  AI called AIpair programmming.
+we can use for shell scripting github copilot.
+install plugin github copilot from vscode plugin
+
+**1. firs give appropriate file name
+  2. Provide description begining of the file
+  3. Relevant variable
+  4. 
 
 
 Llama is LLM(large language model) of Meta.
