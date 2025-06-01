@@ -20,6 +20,7 @@ Shell scripting github copilot with pair programmming (AI assited shell scriptin
 Local ChatGPT Alternative:Run private, uncensored chats (e.g., ollama run llama3). No cloud fees or data leaks
 Coding Assistant: Like Copilot but offline:
 Content Generation: ollama run llama3.2:1b  "Write a tweet about AI privacy in 280 chars"
+creating AI agent: crew
 
 
 
